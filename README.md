@@ -2,13 +2,13 @@
 
 ## テーブル設計
 
-  テーブル：channels <!-- チャンネルテーブル -->
+  Table：channels <!-- チャンネルテーブル -->
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | channel_id | bigint(20) | | PRIMARY | | YES | | |
   | channel_name | varchar(30) | | | | | | YES |
 
-  テーブル：genres <!-- ジャンルテーブル  -->
+  Table：genres <!-- ジャンルテーブル  -->
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | genre_id | bigint(20) | | PRIMARY | | YES | | |
