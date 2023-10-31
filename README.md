@@ -6,4 +6,10 @@
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | channel_id | bigint(20) | | PRIMARY | | YES | | |
-  | channel_name | varchar(100) | | | | | | YES |
+  | channel_name | varchar(30) | | | | | | YES |
+
+  テーブル：genres <!-- ジャンルテーブル  -->
+  | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
+  | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+  | genre_id | bigint(20) | | PRIMARY | | YES | | |
+  | genre_name | varchar(30) | | | | | | YES |
