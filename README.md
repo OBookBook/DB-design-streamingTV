@@ -21,3 +21,10 @@
   | title  | varchar(100) | | | | | | YES |
   | description   | varchar(1000) | | | | | | YES |
   | series_or_single   | TINYINT | | | | | | YES |
+
+  Table：genre_registries <!-- ジャンル登録テーブル  -->
+  | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
+  | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+  | genre_registr_id  | bigint(20) | | PRIMARY | | YES | | |
+  | program_id  | bigint(20) | | | | | Table：programs.program_id | YES |
+  | genre_id  | int | | | | | Table：genres.genre_id | YES |
