@@ -14,8 +14,10 @@
   | genre_id | bigint(20) | | PRIMARY | | YES | | |
   | genre_name | varchar(30) | | | | | | YES |
 
-  Table：content_types <!-- コンテンツタイプ(シリーズなら:1 or 単発なら:0)テーブル  -->
+  Table：programs <!-- 番組テーブル  -->
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-  | content_type_id | bigint(20) | | PRIMARY | | YES | | |
-  | genre_name | TINYINT | | | | | | YES |
+  | program_id  | bigint(20) | | PRIMARY | | YES | | |
+  | title  | varchar(100) | | | | | | YES |
+  | description   | varchar(1000) | | | | | | YES |
+  | series_or_single   | TINYINT | | | | | | YES |
