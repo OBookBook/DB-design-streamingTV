@@ -48,3 +48,15 @@
   | duration | time | | | | |  | |
   | release_date | date | | | | |  | |
   | view_count | bigint(20) | | | | |  | |
+
+  Table：broadcasts <!-- 放映テーブル  -->
+  | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
+  | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+  | broadcast_id | bigint(20) | | PRIMARY | | YES | | |
+  | channel_id | bigint(20) | | | | | Table：channels.channel_id | |
+  | program_id | bigint(20) | | | | | Table：programs.program_id | |
+  | season_id | int | | | | | Table：seasons.season_id | |
+  | episode_id | int | | | | | Table：episodes.episode_id | |
+  | start_time | DATETIME | | | | |  | |
+  | end_time | DATETIME | | | | |  | |
+  | view_count | bigint(20) | | | | |  | |
