@@ -1,3 +1,5 @@
+USE streaming_tv;
+
 -- チャンネルテーブル
 CREATE TABLE channels (
   channel_id bigint(20) PRIMARY KEY AUTO_INCREMENT,

@@ -108,6 +108,11 @@
   source docker-entrypoint-initdb.d/schema/create_tables.sql;
   ```
 
+  6. create_tables.sqlを流して、テーブルを構築するコマンドです。
+  ```shell
+  source docker-entrypoint-initdb.d/data/initial_data.sql;
+  ```
+
 ## よく使ったMySQLコマンド
 
 - SHOW DATABASES;
