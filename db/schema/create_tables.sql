@@ -2,13 +2,13 @@
 CREATE TABLE channels (
   channel_id bigint(20) PRIMARY KEY AUTO_INCREMENT,
   channel_name varchar(30) UNIQUE
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ジャンルテーブル
 CREATE TABLE genres (
   genre_id bigint(20) PRIMARY KEY AUTO_INCREMENT,
   genre_name varchar(30) UNIQUE
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- 番組テーブル
 CREATE TABLE programs (
@@ -16,7 +16,7 @@ CREATE TABLE programs (
   title varchar(100) UNIQUE,
   description TEXT,
   series_or_single tinyint
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ジャンル登録テーブル
 CREATE TABLE genre_registries (
@@ -25,7 +25,7 @@ CREATE TABLE genre_registries (
   genre_id bigint(20),
   FOREIGN KEY (program_id) REFERENCES programs(program_id),
   FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- シーズンテーブル
 CREATE TABLE seasons (
@@ -33,7 +33,7 @@ CREATE TABLE seasons (
   program_id bigint(20),
   season_number int,
   FOREIGN KEY (program_id) REFERENCES programs(program_id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- エピソードテーブル
 CREATE TABLE episodes (
@@ -48,7 +48,7 @@ CREATE TABLE episodes (
   view_count bigint(20),
   FOREIGN KEY (program_id) REFERENCES programs(program_id),
   FOREIGN KEY (season_id) REFERENCES seasons(season_id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- 放映テーブル
 CREATE TABLE broadcasts (
@@ -64,4 +64,4 @@ CREATE TABLE broadcasts (
   FOREIGN KEY (program_id) REFERENCES programs(program_id),
   FOREIGN KEY (season_id) REFERENCES seasons(season_id),
   FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
