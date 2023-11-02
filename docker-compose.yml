@@ -5,10 +5,12 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password_kimetene
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: streaming_tv
       MYSQL_USER: db_user
       MYSQL_PASSWORD: db_password_kimetene
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin

@@ -77,9 +77,44 @@
 
 ## ステップ2 構築
 
-### DBを構築します
+### DBを構築する
 
   1. Dockerを起動し、DBコンテナを作成するコマンドです。
   ```shell
   docker-compose up -d
+  ```
+
+### phpMyAdminが動いているか確認する
+  2. 以下のURLでアクセスできます：[http://localhost:7090/](http://localhost:7090/)
+
+### 設計したテーブルを構築する
+  3. コンテナ内のBashシェルに入るコマンドです。
+  ```shell
+  docker exec -it mysql bash
+  ```
+
+  4. コンテナ内でMySQLクライアントを使用してデータベースに接続するコマンドです。
+  ```shell
+  mysql -u root -p
+  ```
+
+  5. データベース(streaming_tv)を指定するコマンドです。
+  ```shell
+  USE streaming_tv;
+  ```
+
+  6. create_tables.sqlを流して、テーブルを構築するコマンドです。
+  ```shell
+  source docker-entrypoint-initdb.d/schema/create_tables.sql;
+  ```
+
+## よく使ったMySQLコマンド
+
+- SHOW DATABASES;
+- DROP DATABASE streaming_tv;
+- CREATE DATABASE streaming_tv;
+
+- 現在選択されているデータベースを知るためのコマンド
+  ```shell
+  SELECT DATABASE();
   ```
