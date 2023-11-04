@@ -48,7 +48,7 @@ CREATE TABLE episodes (
   duration time NOT NULL,
   release_date date NOT NULL,
   view_count bigint(20) NOT NULL,
-  FOREIGN KEY (program_id) REFERENCES programs(program_id),
+  FOREIGN KEY (program_id) REFERENCES seasons(program_id),
   FOREIGN KEY (season_id) REFERENCES seasons(season_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -63,7 +63,7 @@ CREATE TABLE broadcasts (
   end_time DATETIME NOT NULL,
   view_count bigint(20) NOT NULL,
   FOREIGN KEY (channel_id) REFERENCES channels(channel_id),
-  FOREIGN KEY (program_id) REFERENCES programs(program_id),
-  FOREIGN KEY (season_id) REFERENCES seasons(season_id),
+  FOREIGN KEY (program_id) REFERENCES episodes(program_id),
+  FOREIGN KEY (season_id) REFERENCES episodes(season_id),
   FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
