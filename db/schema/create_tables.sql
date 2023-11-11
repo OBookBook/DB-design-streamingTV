@@ -3,8 +3,7 @@ USE streaming_tv;
 -- チャンネルテーブル
 CREATE TABLE channels (
   channel_id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
-  channel_name VARCHAR(30) NOT NULL,
-  -- INDEX idx_channel_id (channel_id)
+  channel_name VARCHAR(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ジャンルテーブル
