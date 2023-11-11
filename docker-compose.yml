@@ -9,8 +9,11 @@ services:
       MYSQL_DATABASE: streaming_tv
       MYSQL_USER: db_user
       MYSQL_PASSWORD: db_password_kimetene
+    ports:
+      - "3307:3306"
     volumes:
       - ./db:/docker-entrypoint-initdb.d
+      - ./db/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
