@@ -26,9 +26,9 @@
   | description | TEXT | | | | | | |
   | series_or_single | tinyint | | | | | | |
 
-## ジャンル登録テーブル
+## 番組ジャンルテーブル
 
-  Table：genre_registries <!-- ジャンル登録テーブル  -->
+  Table：program_genres  <!-- 番組ジャンルテーブル  -->
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | genre_registr_id | bigint(20) | | PRIMARY | | YES | | |

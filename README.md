@@ -16,7 +16,7 @@ mysql> SHOW TABLES;
 | broadcasts             |
 | channels               |
 | episodes               |
-| genre_registries       |
+| program_genres       |
 | genres                 |
 | programs               |
 | seasons                |
@@ -65,9 +65,9 @@ mysql> DESCRIBE programs;
 4 rows in set (0.00 sec)
 ```
 
-### Table：genre_registries
+### Table：program_genres
 ```shell
-mysql> DESCRIBE genre_registries;
+mysql> DESCRIBE program_genres;
 +-------------------+--------+------+-----+---------+----------------+
 | Field             | Type   | Null | Key | Default | Extra          |
 +-------------------+--------+------+-----+---------+----------------+
@@ -171,10 +171,10 @@ mysql> SELECT * FROM `genres`;
 2 rows in set (0.00 sec)
 ```
 
-### Table：genre_registries (Test Data)
+### Table：program_genres (Test Data)
 
 ```shell
-mysql> SELECT * FROM `genre_registries`;
+mysql> SELECT * FROM `program_genres`;
 +-------------------+------------+----------+
 | genre_registry_id | program_id | genre_id |
 +-------------------+------------+----------+
