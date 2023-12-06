@@ -21,7 +21,7 @@ CREATE TABLE programs (
 )   ENGINE=InnoDB     DEFAULT CHARSET=utf8mb4  COLLATE=utf8mb4_0900_ai_ci;
 
 -- ジャンル登録テーブル
-CREATE TABLE genre_registries (
+CREATE TABLE program_genres (
     genre_registry_id BIGINT(20)               PRIMARY KEY AUTO_INCREMENT,
     program_id        BIGINT(20),
     genre_id          BIGINT(20),
