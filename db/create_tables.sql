@@ -33,7 +33,7 @@ CREATE TABLE program_genres (
 CREATE TABLE seasons (
     id                BIGINT(20)               PRIMARY KEY AUTO_INCREMENT,
     program_id        BIGINT(20)               NOT NULL,
-    season_number     INT                      NOT NULL,
+    number            INT                      NOT NULL,
                       FOREIGN KEY (program_id) REFERENCES programs(id)
 )   ENGINE=InnoDB     DEFAULT CHARSET=utf8mb4  COLLATE=utf8mb4_0900_ai_ci;
 
@@ -41,7 +41,7 @@ CREATE TABLE seasons (
 CREATE TABLE episodes (
     id                BIGINT(20)               PRIMARY KEY AUTO_INCREMENT,
     season_id         BIGINT(20)               NOT NULL,
-    episode_number    VARCHAR(100)             NOT NULL,
+    number            INT                      NOT NULL,
     title             VARCHAR(100)             NOT NULL,
     description       TEXT                     NOT NULL,
     duration          TIME                     NOT NULL,

@@ -1,6 +1,6 @@
 # インターネットTV (DB設計 構築 SQL)
 
-![ER図](./images/[ver1.0.1_review]db_streaming_tv_er_diagram.png)
+![ER図](./images/[ver1.0.1]db_streaming_tv_er_diagram.png)
 
 - [Step 1: DB設計](./docs/step_1_table_design.md)
 - [Step 2: テーブル構築](./docs/step_2_table_build.md)

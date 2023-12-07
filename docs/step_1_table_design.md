@@ -42,7 +42,7 @@
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | id | bigint(20) | | PRIMARY | | YES | | |
   | program_id | bigint(20) | | | | | Table：programs.id | |
-  | season_number | bigint(20) | | | | |  | |
+  | number | bigint(20) | | | | |  | |
 
 ## エピソードテーブル
 
@@ -51,7 +51,7 @@
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | id | bigint(20) | | PRIMARY | | YES | | |
   | season_id | bigint(20) | | | | | Table：seasons.id | |
-  | episode_number | varchar(100) | | | | |  | |
+  | number | varchar(100) | | | | |  | |
   | title | varchar(100) | | | | |  | |
   | description | TEXT | | | | |  | |
   | duration | time | | | | |  | |
