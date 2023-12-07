@@ -40,7 +40,6 @@ CREATE TABLE seasons (
 -- エピソードテーブル
 CREATE TABLE episodes (
     id                BIGINT(20)               PRIMARY KEY AUTO_INCREMENT,
-    program_id        BIGINT(20)               NOT NULL,
     season_id         BIGINT(20)               NOT NULL,
     episode_number    VARCHAR(100)             NOT NULL,
     title             VARCHAR(100)             NOT NULL,
@@ -48,7 +47,6 @@ CREATE TABLE episodes (
     duration          TIME                     NOT NULL,
     release_date      DATE                     NOT NULL,
     view_count        BIGINT(20)               NOT NULL,
-                      FOREIGN KEY (program_id) REFERENCES programs(id),
                       FOREIGN KEY (season_id)  REFERENCES seasons(id)
 )   ENGINE=InnoDB     DEFAULT CHARSET=utf8mb4  COLLATE=utf8mb4_0900_ai_ci;
 

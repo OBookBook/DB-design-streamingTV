@@ -32,7 +32,7 @@
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | id | bigint(20) | | PRIMARY | | YES | | |
-  | program_id | bigint(20) | | | | | Table：programs.program_id | |
+  | program_id | bigint(20) | | | | | Table：programs.id | |
   | genre_id | int | | | | | Table：genres.genre_id | |
 
 ## シーズンテーブル
@@ -50,7 +50,6 @@
   | Column Name | Data Type | NULL | Key | Default | AUTO_INCREMENT | Foreign Key Constraint | Unique Key Constraint |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | id | bigint(20) | | PRIMARY | | YES | | |
-  | program_id | bigint(20) | | | | | Table：programs.id | |
   | season_id | bigint(20) | | | | | Table：seasons.id | |
   | episode_number | varchar(100) | | | | |  | |
   | title | varchar(100) | | | | |  | |
